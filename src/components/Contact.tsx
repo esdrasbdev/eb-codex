@@ -31,6 +31,8 @@ export function Contact() {
     if (errors[name as keyof FormErrors]) setErrors((prev) => ({ ...prev, [name]: undefined }))
   }
 
+  const PHONE_WHATSAPP = '88998127580'
+
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
     const validation = validate(form)
@@ -38,9 +40,19 @@ export function Contact() {
     if (Object.keys(validation).length > 0) return
 
     setStatus('submitting')
+
     try {
-      // Ponto de integração: substituir por chamada real (API própria, Resend, Formspree, etc.)
-      await new Promise((resolve) => setTimeout(resolve, 1400))
+      const whatsappMessage = [
+        'Novo contato pelo formulário:',
+        `Nome: ${form.name}`,
+        `E-mail: ${form.email}`,
+        `Tipo de projeto: ${form.projectType}`,
+        `Mensagem: ${form.message}`,
+      ].join('\n')
+
+      const url = `https://wa.me/${PHONE_WHATSAPP}?text=${encodeURIComponent(whatsappMessage)}`
+
+      window.open(url, '_blank', 'noopener,noreferrer')
       setStatus('success')
       setForm(EMPTY_FORM)
     } catch {

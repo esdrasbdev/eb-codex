@@ -14,7 +14,6 @@ function validate(data: ContactFormData): FormErrors {
   if (data.name.trim().length < 2) errors.name = 'Informe seu nome completo.'
   if (!EMAIL_REGEX.test(data.email)) errors.email = 'Informe um e-mail válido.'
   if (!data.projectType) errors.projectType = 'Selecione o tipo de projeto.'
-  if (data.message.trim().length < 10) errors.message = 'Conte um pouco mais sobre o projeto (mín. 10 caracteres).'
   return errors
 }
 

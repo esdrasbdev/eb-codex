@@ -76,7 +76,7 @@ export function Hero() {
               className="inline-flex items-center justify-center gap-2 rounded-full border border-ink/15 px-7 py-3.5 text-sm font-mono uppercase tracking-widest text-ink/80 transition-colors hover:border-gold-500/60 hover:text-gold-600 dark:border-parchment/15 dark:text-parchment/80 dark:hover:text-gold-400"
             >
               <PlayCircle className="h-4 w-4" aria-hidden="true" />
-              Ver Portfólio
+              Ver Serviços
             </button>
           </motion.div>
 

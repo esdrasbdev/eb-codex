@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  * {
+    @apply border-ink-soft/30;
+  }
+
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    @apply bg-parchment text-ink font-sans antialiased transition-colors duration-500;
+  }
+
+  html.dark body {
+    @apply bg-ink text-parchment;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+
+  /* Foco visível para navegação por teclado — nunca removido */
+:focus-visible {
+    outline: 2px solid #0B0B0E;
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  html.dark :focus-visible {
+    outline-color: #FAF8F3;
+  }
+
+  ::selection {
+    background-color: rgba(11, 11, 14, 0.22);
+    color: inherit;
+  }
+
+  html.dark ::selection {
+    background-color: rgba(250, 248, 243, 0.22);
+  }
+
+
+  /* Respeita a preferência do sistema por menos movimento */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* Numeral de capítulo — referência tipográfica ao livro/códice */
+  .chapter-mark {
+    @apply font-display italic text-gold-500 text-sm tracking-[0.3em];
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

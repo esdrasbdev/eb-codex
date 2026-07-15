@@ -3,7 +3,7 @@ import { Github, Linkedin, Instagram, Mail } from 'lucide-react'
 const SOCIAL_LINKS = [
   { icon: Github, label: 'GitHub', href: 'https://github.com/esdrasbdev' },
   { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/esdrasbdev/' },
-  { icon: Instagram, label: 'Instagram', href: 'https://www.instagram.com/_esdrasb/' },
+  { icon: Instagram, label: 'Instagram', href: 'https://www.instagram.com/ebcodex/' },
   { icon: Mail, label: 'E-mail', href: 'mailto:contato@ebcodex.dev' },
 ]
 

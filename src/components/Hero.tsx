@@ -33,7 +33,7 @@ export function Hero() {
             transition={{ duration: 0.6 }}
             className="font-mono text-xs uppercase tracking-[0.3em] text-gold-600 dark:text-gold-400"
           >
-            Engenharia de Software · Cedro, CE
+            Engenharia de Software
           </motion.p>
 
           <motion.h1

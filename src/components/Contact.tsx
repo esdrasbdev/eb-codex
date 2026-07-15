@@ -198,7 +198,7 @@ export function Contact() {
 
             <p className="flex items-center gap-2 text-xs text-ink/40 dark:text-parchment/40">
               <Mail className="h-3.5 w-3.5" aria-hidden="true" />
-              Prefere e-mail direto? Escreva para contato@ebcodex.dev
+              Prefere contato direto? Envie mensagem para o número (88) 9 9812-7580 via WhatsApp.
             </p>
           </form>
         </RevealOnScroll>
